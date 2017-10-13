@@ -125,7 +125,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
   endif (OPENSSL_FOUND)
 endif()
 
-if (UNIX)
+if (UNIX OR NX)
   target_link_libraries(fileserver
     ${Boost_LIBRARIES}
     ${CMAKE_THREAD_LIBS_INIT}
