@@ -12,8 +12,6 @@
 
 #include <boost/network/protocol/http/client/connection/normal_delegate.ipp>
 
-#if !defined(NN_NINTENDO_SDK)
-#	ifdef BOOST_NETWORK_ENABLE_HTTPS
-#		include <boost/network/protocol/http/client/connection/ssl_delegate.ipp>
-#	endif
+#ifdef BOOST_NETWORK_ENABLE_HTTPS
+#	include <boost/network/protocol/http/client/connection/ssl_delegate.ipp>
 #endif
